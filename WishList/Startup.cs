@@ -8,7 +8,7 @@ using WishList.Models;
 
 namespace WishList
 {
-@@ -14,6 +16,7 @@ public void ConfigureServices(IServiceCollection services)
+public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("Wishlist"));
@@ -16,7 +16,7 @@ namespace WishList
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-@@ -28,6 +31,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
                 app.UseExceptionHandler("/Home/Error");
             }
 
