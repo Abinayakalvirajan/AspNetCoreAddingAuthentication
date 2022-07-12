@@ -45,6 +45,12 @@ if (!result.Succeeded)
 
             return RedirectToAction("Index", "Home");
         }
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Login()
+        {
+            return View();
+        }
     }
     }
 
