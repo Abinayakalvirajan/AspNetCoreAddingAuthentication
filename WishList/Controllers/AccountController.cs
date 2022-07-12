@@ -51,6 +51,13 @@ if (!result.Succeeded)
         {
             return View();
         }
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public IActionResult Login(LoginViewModel model)
+        {
+            return RedirectToAction("Index", "Item");
+        }
     }
     }
 
