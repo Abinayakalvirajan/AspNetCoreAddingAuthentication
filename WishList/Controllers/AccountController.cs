@@ -61,6 +61,13 @@ if (!result.Succeeded)
 
             return RedirectToAction("Index", "Item");
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Logout()
+        {
+            _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
     }
     }
 
